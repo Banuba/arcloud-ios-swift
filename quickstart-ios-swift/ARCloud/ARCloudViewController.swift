@@ -13,9 +13,9 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     private var sdkManager = BanubaSdkManager()
     private let config = EffectPlayerConfiguration(renderMode: .video, renderContentMode: .resizeAspectFill)
     private var effectArray: [AREffectModel]? = []
-
+    
     //MARK: - ARCloud
-
+    
     // Start loading all effect previews from AR Cloud
     private func loadAREffectPreviews() {
         DispatchQueue.main.async {
@@ -27,34 +27,36 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
             })
         }
     }
-
+    
     // Start loading tapped effect by the effect name
     private func downloadAREffect(newEffectName: String, synchronous: Bool) {
         _ = sdkManager.loadEffect(newEffectName, synchronous: synchronous)
     }
-
+    
     // Show alert if ARCloudManager.clientCloudId is empty
     private func showCloudIdAlertIfNeeded() {
         guard ARCloudManager.clientCloudId != "" else {
-            let alert = UIAlertController(
-                title: "Invalid Client Cloud Id",
-                message: "Please add Client Cloud Id to ARCloud/ARCloudManager.swift!",
-                preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            DispatchQueue.main.async {
+                let alert = UIAlertController(
+                    title: "Invalid Client Cloud Id",
+                    message: "Please add Client Cloud Id to ARCloud/ARCloudManager.swift!",
+                    preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
             return
         }
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EffectCollectionViewCell", for: indexPath) as! EffectCollectionViewCell
         let effect = self.effectArray?[indexPath.item]
-
+        
         DispatchQueue.global(qos: .userInitiated).async {
             guard let url = URL(string: effect?.previewUrl ?? ""),
                   let imageData = try? Data(contentsOf: url)
             else { return }
-
+            
             DispatchQueue.main.async {
                 cell.titleLabel.text = effect?.title
                 cell.previewImage.image = UIImage(data: imageData)
@@ -62,12 +64,12 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
         return cell
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let effect = self.effectArray?[indexPath.item]
         guard let effectName = effect?.title else { return }
         activityIndicator.startAnimating()
-
+        
         ARCloudManager.loadTappedEffect(effectName: effectName) { [weak self] effectUrl in
             guard let self = self else { return }
             self.downloadAREffect(newEffectName: effectName, synchronous: true)
@@ -76,20 +78,19 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int { 1 }
-   
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.effectArray?.count ?? 0
     }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
-        UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            CGSize(width: 180, height: 180)
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: 180, height: 180)
     }
-
+    
     deinit {
         sdkManager.destroyEffectPlayer()
     }
-
+    
     @IBAction func closeARCloud(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -97,7 +98,7 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
 
 //MARK: Camera
 extension ARCloudViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAREffectPreviews()
@@ -105,7 +106,7 @@ extension ARCloudViewController {
         sdkManager.setup(configuration: config)
         setUpRenderSize()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         activityIndicator.startAnimating()
@@ -113,7 +114,7 @@ extension ARCloudViewController {
         sdkManager.startEffectPlayer()
         showCloudIdAlertIfNeeded()
     }
-
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         sdkManager.stopEffectPlayer()
         sdkManager.removeRenderTarget()
@@ -122,7 +123,7 @@ extension ARCloudViewController {
             self.setUpRenderSize()
         }, completion: nil)
     }
-
+    
     private func setUpRenderTarget() {
         guard let effectView = self.effectView.layer as? CAEAGLLayer else { return }
         sdkManager.setRenderTarget(layer: effectView, playerConfiguration: nil)
