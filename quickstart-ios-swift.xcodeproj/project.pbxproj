@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1315CE4F25B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1315CE4E25B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework */; };
 		1315CE5025B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1315CE4E25B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		704AE60E25FB75FE00582E25 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 704AE60D25FB75FE00582E25 /* effects */; };
 		70A26A1825EE7D090045A9B8 /* BanubaSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A26A1525EE7CFE0045A9B8 /* BanubaSdk.framework */; };
 		70A26A1925EE7D090045A9B8 /* BanubaSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70A26A1525EE7CFE0045A9B8 /* BanubaSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70EA553923F2C90A00D3B4DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA553823F2C90A00D3B4DB /* AppDelegate.swift */; };
@@ -60,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		1315CE4E25B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BanubaEffectPlayer.xcframework; path = Frameworks/BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
+		704AE60D25FB75FE00582E25 /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
 		70A26A1025EE7CFD0045A9B8 /* BanubaSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BanubaSdk.xcodeproj; path = Frameworks/BanubaSdk.xcodeproj; sourceTree = "<group>"; };
 		70EA553523F2C90A00D3B4DB /* quickstart-ios-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quickstart-ios-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70EA553823F2C90A00D3B4DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				70EA556123F2D23F00D3B4DB /* BanubaClientToken.swift */,
 				70EA553823F2C90A00D3B4DB /* AppDelegate.swift */,
 				835CCF4E25CDA0AE00EB133D /* ARCloud */,
+				704AE60D25FB75FE00582E25 /* effects */,
 				70EA554623F2C91100D3B4DB /* Info.plist */,
 			);
 			path = "quickstart-ios-swift";
@@ -268,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704AE60E25FB75FE00582E25 /* effects in Resources */,
 				835CCF5525CDA0C700EB133D /* ARCloud.storyboard in Resources */,
 				70EA556A23F2D78100D3B4DB /* README.md in Resources */,
 			);
