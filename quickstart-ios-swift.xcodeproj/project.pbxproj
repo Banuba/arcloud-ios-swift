@@ -13,7 +13,6 @@
 		70A26A1925EE7D090045A9B8 /* BanubaSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70A26A1525EE7CFE0045A9B8 /* BanubaSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70EA553923F2C90A00D3B4DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA553823F2C90A00D3B4DB /* AppDelegate.swift */; };
 		70EA556223F2D23F00D3B4DB /* BanubaClientToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA556123F2D23F00D3B4DB /* BanubaClientToken.swift */; };
-		70EA556423F2D30600D3B4DB /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 70EA556323F2D30600D3B4DB /* effects */; };
 		70EA556A23F2D78100D3B4DB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 70EA556923F2D78100D3B4DB /* README.md */; };
 		835CCF4625CDA04800EB133D /* ARCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835CCF4525CDA04800EB133D /* ARCloudManager.swift */; };
 		835CCF5325CDA0C700EB133D /* ARCloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835CCF4F25CDA0C700EB133D /* ARCloudViewController.swift */; };
@@ -66,7 +65,6 @@
 		70EA553823F2C90A00D3B4DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70EA554623F2C91100D3B4DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70EA556123F2D23F00D3B4DB /* BanubaClientToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanubaClientToken.swift; sourceTree = "<group>"; };
-		70EA556323F2D30600D3B4DB /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
 		70EA556923F2D78100D3B4DB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		835CCF4525CDA04800EB133D /* ARCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCloudManager.swift; sourceTree = "<group>"; };
 		835CCF4F25CDA0C700EB133D /* ARCloudViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARCloudViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				70EA556123F2D23F00D3B4DB /* BanubaClientToken.swift */,
 				70EA553823F2C90A00D3B4DB /* AppDelegate.swift */,
 				835CCF4E25CDA0AE00EB133D /* ARCloud */,
-				70EA556323F2D30600D3B4DB /* effects */,
 				70EA554623F2C91100D3B4DB /* Info.plist */,
 			);
 			path = "quickstart-ios-swift";
@@ -273,7 +270,6 @@
 			files = (
 				835CCF5525CDA0C700EB133D /* ARCloud.storyboard in Resources */,
 				70EA556A23F2D78100D3B4DB /* README.md in Resources */,
-				70EA556423F2D30600D3B4DB /* effects in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
