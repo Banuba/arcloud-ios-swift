@@ -5,7 +5,7 @@ struct ARCloudManager {
 
     // Add your Client Cloud Id instead of empty quotes
     static let clientCloudId = ""
-    fileprivate static let banubaARCloud = BanubaARCloud(uuidString: clientCloudId)
+    fileprivate static let banubaARCloud = BanubaARCloud(arCloudUrl: clientCloudId)
 
     static func fetchAREffects(completion: @escaping ([AREffectModel]) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
