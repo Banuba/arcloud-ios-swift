@@ -1,16 +1,18 @@
 import Foundation
 import BanubaARCloudSDK
+import BanubaEffectPlayer
 
 struct ARCloudManager {
-
+    
     // Add your Client Cloud Id instead of empty quotes
-    static let clientCloudId = ""
-    fileprivate static let banubaARCloud = BanubaARCloud(arCloudUrl: clientCloudId)
-
+    static let arCloudUrl = BNBLicenseManager.create(banubaClientToken)?.getJson().getARCloudUrl()
+    fileprivate static let banubaARCloud = BanubaARCloud(arCloudUrl: arCloudUrl!)
+    
     static func fetchAREffects(completion: @escaping ([AREffectModel]) -> Void) {
+        
         DispatchQueue.global(qos: .userInteractive).async {
             var array: [AREffectModel] = []
-
+            
             banubaARCloud.getAREffects {(effectsArray, _) in
                 effectsArray?.forEach({ effect in
                     let effectModel = AREffectModel(
@@ -50,4 +52,19 @@ struct ARCloudManager {
     }
 }
 
-
+extension String {
+    func getARCloudUrl() -> String {
+        let data = Data(self.utf8)
+        var resultedUrl = String()
+        do {
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                if let url = json["ar_cloud_url"] as? String {
+                    resultedUrl = url
+                }
+            }
+        } catch let error as NSError {
+            print("Failed to load: \(error.localizedDescription)")
+        }
+        return resultedUrl
+    }
+}

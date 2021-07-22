@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1315CE4F25B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1315CE4E25B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework */; };
 		1315CE5025B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1315CE4E25B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7024085026A99ADA00E1B447 /* BanubaSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A26A1525EE7CFE0045A9B8 /* BanubaSdk.framework */; };
+		7024085126A99ADA00E1B447 /* BanubaSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70A26A1525EE7CFE0045A9B8 /* BanubaSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		704AE60E25FB75FE00582E25 /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 704AE60D25FB75FE00582E25 /* effects */; };
-		70A26A1825EE7D090045A9B8 /* BanubaSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A26A1525EE7CFE0045A9B8 /* BanubaSdk.framework */; };
-		70A26A1925EE7D090045A9B8 /* BanubaSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70A26A1525EE7CFE0045A9B8 /* BanubaSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70D03C19266513AE00E683E9 /* BanubaUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D03C15266513AA00E683E9 /* BanubaUtilities.xcframework */; };
 		70D03C1A266513AE00E683E9 /* BanubaUtilities.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70D03C15266513AA00E683E9 /* BanubaUtilities.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70EA553923F2C90A00D3B4DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EA553823F2C90A00D3B4DB /* AppDelegate.swift */; };
@@ -54,7 +54,7 @@
 			files = (
 				835CCF5E25CDA22600EB133D /* BanubaARCloudSDK.xcframework in Embed Frameworks */,
 				1315CE5025B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
-				70A26A1925EE7D090045A9B8 /* BanubaSdk.framework in Embed Frameworks */,
+				7024085126A99ADA00E1B447 /* BanubaSdk.framework in Embed Frameworks */,
 				70D03C1A266513AE00E683E9 /* BanubaUtilities.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -91,7 +91,7 @@
 			files = (
 				835CCF5D25CDA22600EB133D /* BanubaARCloudSDK.xcframework in Frameworks */,
 				1315CE4F25B5B5CC002ED0D6 /* BanubaEffectPlayer.xcframework in Frameworks */,
-				70A26A1825EE7D090045A9B8 /* BanubaSdk.framework in Frameworks */,
+				7024085026A99ADA00E1B447 /* BanubaSdk.framework in Frameworks */,
 				70D03C19266513AE00E683E9 /* BanubaUtilities.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +330,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -362,6 +366,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -390,6 +395,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -422,6 +431,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

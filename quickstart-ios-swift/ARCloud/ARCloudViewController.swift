@@ -32,22 +32,7 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     private func downloadAREffect(newEffectName: String, synchronous: Bool) {
         _ = sdkManager.loadEffect(newEffectName, synchronous: synchronous)
     }
-    
-    // Show alert if ARCloudManager.clientCloudId is empty
-    private func showCloudIdAlertIfNeeded() {
-        guard ARCloudManager.clientCloudId != "" else {
-            DispatchQueue.main.async {
-                let alert = UIAlertController(
-                    title: "Invalid Client Cloud Id",
-                    message: "Please add Client Cloud Id to ARCloud/ARCloudManager.swift!",
-                    preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
-            return
-        }
-    }
-    
+        
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EffectCollectionViewCell", for: indexPath) as! EffectCollectionViewCell
         let effect = self.effectArray?[indexPath.item]
@@ -112,7 +97,6 @@ extension ARCloudViewController {
         activityIndicator.startAnimating()
         sdkManager.input.startCamera()
         sdkManager.startEffectPlayer()
-        showCloudIdAlertIfNeeded()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
