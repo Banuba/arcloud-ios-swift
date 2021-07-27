@@ -1,15 +1,7 @@
-//
-//  quickstart_ios_swiftUITests.swift
-//  quickstart-ios-swiftUITests
-//
-//  Created by Andrey Krivoshey on 4/8/20.
-//  Copyright © 2020 Ivan Gulidov. All rights reserved.
-//
-
 import XCTest
 
-class quickstart_ios_swiftUITests: UITestBase {
-
+class arcloud_ios_swiftUITests: UITestBase {
+    
     func testEffect() {
         app/*@START_MENU_TOKEN@*/.staticTexts[" Camera "]/*[[".buttons[\" Camera \"].staticTexts[\" Camera \"]",".staticTexts[\" Camera \"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
@@ -28,7 +20,7 @@ class quickstart_ios_swiftUITests: UITestBase {
     func testPhotos() {
         app.buttons["Photos"].tap()
         
-//        sleep(2)
+        //        sleep(2)
         XCTAssertTrue(app.otherElements.tables.cells["UItest"].waitForExistence(timeout: 5))
         app.otherElements.tables.cells["UItest"].tap()
         
@@ -62,5 +54,5 @@ class quickstart_ios_swiftUITests: UITestBase {
         takeScreenshot(name: "Processed video")
         app.navigationBars["Video"].buttons["Stop"].tap()
     }
-
+    
 }

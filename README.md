@@ -28,4 +28,5 @@ Contributions are what make the open source community such an amazing place to b
 
 # Testing
 
-The project contains XCUITest in `quickstart-ios-swiftUITests`. For correct tests work `UItest` album should be created on device and should contain at least one photo and one video inside.
+The project contains XCUITest in `arcloud-ios-swiftUITests`. For correct tests work `UItest` album should be created on device and should contain at least one photo and one video inside.
+

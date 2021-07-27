@@ -1,0 +1,695 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		707A8AE026B037A9004C9CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8ADF26B037A9004C9CAD /* AppDelegate.swift */; };
+		707A8AE726B037A9004C9CAD /* ARCloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707A8AE526B037A9004C9CAD /* ARCloud.storyboard */; };
+		707A8B0226B037B3004C9CAD /* arcloud_ios_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B0126B037B3004C9CAD /* arcloud_ios_swiftUITests.swift */; };
+		707A8B1126B03834004C9CAD /* quickstart_ios_swiftUITestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1026B03834004C9CAD /* quickstart_ios_swiftUITestsBase.swift */; };
+		707A8B1326B0386B004C9CAD /* BanubaClientToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1226B0386B004C9CAD /* BanubaClientToken.swift */; };
+		707A8B1626B038C3004C9CAD /* ARCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1526B038C3004C9CAD /* ARCloudManager.swift */; };
+		707A8B1826B038D0004C9CAD /* ARCloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1726B038D0004C9CAD /* ARCloudViewController.swift */; };
+		707A8B1A26B038DA004C9CAD /* AREffectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1926B038DA004C9CAD /* AREffectModel.swift */; };
+		707A8B1C26B038E5004C9CAD /* EffectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1B26B038E5004C9CAD /* EffectCollectionViewCell.swift */; };
+		707A8B2F26B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */; };
+		707A8B3026B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		707A8B3226B03A08004C9CAD /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B1E26B039E4004C9CAD /* BanubaEffectPlayer.xcframework */; };
+		707A8B3326B03A08004C9CAD /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B1E26B039E4004C9CAD /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		707A8B3426B03A09004C9CAD /* BanubaUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */; };
+		707A8B3526B03A09004C9CAD /* BanubaUtilities.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		707A8B3626B03A0E004C9CAD /* BanubaSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */; };
+		707A8B3726B03A0E004C9CAD /* BanubaSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		707A8B3926B03BB1004C9CAD /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 707A8B3826B03BB1004C9CAD /* effects */; };
+		707A8B3C26B03BDA004C9CAD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 707A8B3B26B03BDA004C9CAD /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		707A8AF326B037B2004C9CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 707A8AD426B037A8004C9CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 707A8ADB26B037A9004C9CAD;
+			remoteInfo = "arcloud-ios-swift";
+		};
+		707A8AFE26B037B3004C9CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 707A8AD426B037A8004C9CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 707A8ADB26B037A9004C9CAD;
+			remoteInfo = "arcloud-ios-swift";
+		};
+		707A8B2926B039F0004C9CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 707A8B2026B039EA004C9CAD /* BanubaSdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57AB757820FF4A240013C11F;
+			remoteInfo = BanubaSdk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		707A8B3126B03A07004C9CAD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				707A8B3326B03A08004C9CAD /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
+				707A8B3026B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Embed Frameworks */,
+				707A8B3726B03A0E004C9CAD /* BanubaSdk.framework in Embed Frameworks */,
+				707A8B3526B03A09004C9CAD /* BanubaUtilities.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		707A8ADC26B037A9004C9CAD /* arcloud-ios-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arcloud-ios-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		707A8ADF26B037A9004C9CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		707A8AE626B037A9004C9CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ARCloud.storyboard; sourceTree = "<group>"; };
+		707A8AED26B037B2004C9CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		707A8AF226B037B2004C9CAD /* arcloud-ios-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "arcloud-ios-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		707A8AFD26B037B3004C9CAD /* arcloud-ios-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "arcloud-ios-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		707A8B0126B037B3004C9CAD /* arcloud_ios_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arcloud_ios_swiftUITests.swift; sourceTree = "<group>"; };
+		707A8B0326B037B3004C9CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		707A8B1026B03834004C9CAD /* quickstart_ios_swiftUITestsBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quickstart_ios_swiftUITestsBase.swift; sourceTree = "<group>"; };
+		707A8B1226B0386B004C9CAD /* BanubaClientToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanubaClientToken.swift; sourceTree = "<group>"; };
+		707A8B1526B038C3004C9CAD /* ARCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCloudManager.swift; sourceTree = "<group>"; };
+		707A8B1726B038D0004C9CAD /* ARCloudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCloudViewController.swift; sourceTree = "<group>"; };
+		707A8B1926B038DA004C9CAD /* AREffectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AREffectModel.swift; sourceTree = "<group>"; };
+		707A8B1B26B038E5004C9CAD /* EffectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectCollectionViewCell.swift; sourceTree = "<group>"; };
+		707A8B1E26B039E4004C9CAD /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
+		707A8B2026B039EA004C9CAD /* BanubaSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BanubaSdk.xcodeproj; sourceTree = "<group>"; };
+		707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BanubaUtilities.xcframework; sourceTree = "<group>"; };
+		707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BanubaARCloudSDK.xcframework; sourceTree = "<group>"; };
+		707A8B3826B03BB1004C9CAD /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
+		707A8B3B26B03BDA004C9CAD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		707A8AD926B037A9004C9CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707A8B3226B03A08004C9CAD /* BanubaEffectPlayer.xcframework in Frameworks */,
+				707A8B2F26B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Frameworks */,
+				707A8B3626B03A0E004C9CAD /* BanubaSdk.framework in Frameworks */,
+				707A8B3426B03A09004C9CAD /* BanubaUtilities.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		707A8AEF26B037B2004C9CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		707A8AFA26B037B3004C9CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		707A8AD326B037A8004C9CAD = {
+			isa = PBXGroup;
+			children = (
+				707A8B3B26B03BDA004C9CAD /* README.md */,
+				707A8ADE26B037A9004C9CAD /* arcloud-ios-swift */,
+				707A8B0026B037B3004C9CAD /* arcloud-ios-swiftUITests */,
+				707A8ADD26B037A9004C9CAD /* Products */,
+				707A8B1D26B039B4004C9CAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		707A8ADD26B037A9004C9CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				707A8ADC26B037A9004C9CAD /* arcloud-ios-swift.app */,
+				707A8AF226B037B2004C9CAD /* arcloud-ios-swiftTests.xctest */,
+				707A8AFD26B037B3004C9CAD /* arcloud-ios-swiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		707A8ADE26B037A9004C9CAD /* arcloud-ios-swift */ = {
+			isa = PBXGroup;
+			children = (
+				707A8B1226B0386B004C9CAD /* BanubaClientToken.swift */,
+				707A8ADF26B037A9004C9CAD /* AppDelegate.swift */,
+				707A8B1426B038B2004C9CAD /* ARCloud */,
+				707A8B3826B03BB1004C9CAD /* effects */,
+				707A8AED26B037B2004C9CAD /* Info.plist */,
+			);
+			path = "arcloud-ios-swift";
+			sourceTree = "<group>";
+		};
+		707A8B0026B037B3004C9CAD /* arcloud-ios-swiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				707A8B0126B037B3004C9CAD /* arcloud_ios_swiftUITests.swift */,
+				707A8B1026B03834004C9CAD /* quickstart_ios_swiftUITestsBase.swift */,
+				707A8B0326B037B3004C9CAD /* Info.plist */,
+			);
+			path = "arcloud-ios-swiftUITests";
+			sourceTree = "<group>";
+		};
+		707A8B1426B038B2004C9CAD /* ARCloud */ = {
+			isa = PBXGroup;
+			children = (
+				707A8B1526B038C3004C9CAD /* ARCloudManager.swift */,
+				707A8AE526B037A9004C9CAD /* ARCloud.storyboard */,
+				707A8B1726B038D0004C9CAD /* ARCloudViewController.swift */,
+				707A8B1926B038DA004C9CAD /* AREffectModel.swift */,
+				707A8B1B26B038E5004C9CAD /* EffectCollectionViewCell.swift */,
+			);
+			path = ARCloud;
+			sourceTree = "<group>";
+		};
+		707A8B1D26B039B4004C9CAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				707A8B2026B039EA004C9CAD /* BanubaSdk.xcodeproj */,
+				707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */,
+				707A8B1E26B039E4004C9CAD /* BanubaEffectPlayer.xcframework */,
+				707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		707A8B2626B039F0004C9CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		707A8ADB26B037A9004C9CAD /* arcloud-ios-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 707A8B0626B037B3004C9CAD /* Build configuration list for PBXNativeTarget "arcloud-ios-swift" */;
+			buildPhases = (
+				707A8AD826B037A9004C9CAD /* Sources */,
+				707A8AD926B037A9004C9CAD /* Frameworks */,
+				707A8ADA26B037A9004C9CAD /* Resources */,
+				707A8B3126B03A07004C9CAD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "arcloud-ios-swift";
+			productName = "arcloud-ios-swift";
+			productReference = 707A8ADC26B037A9004C9CAD /* arcloud-ios-swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		707A8AF126B037B2004C9CAD /* arcloud-ios-swiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 707A8B0926B037B3004C9CAD /* Build configuration list for PBXNativeTarget "arcloud-ios-swiftTests" */;
+			buildPhases = (
+				707A8AEE26B037B2004C9CAD /* Sources */,
+				707A8AEF26B037B2004C9CAD /* Frameworks */,
+				707A8AF026B037B2004C9CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				707A8AF426B037B2004C9CAD /* PBXTargetDependency */,
+			);
+			name = "arcloud-ios-swiftTests";
+			productName = "arcloud-ios-swiftTests";
+			productReference = 707A8AF226B037B2004C9CAD /* arcloud-ios-swiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		707A8AFC26B037B3004C9CAD /* arcloud-ios-swiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 707A8B0C26B037B3004C9CAD /* Build configuration list for PBXNativeTarget "arcloud-ios-swiftUITests" */;
+			buildPhases = (
+				707A8AF926B037B3004C9CAD /* Sources */,
+				707A8AFA26B037B3004C9CAD /* Frameworks */,
+				707A8AFB26B037B3004C9CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				707A8AFF26B037B3004C9CAD /* PBXTargetDependency */,
+			);
+			name = "arcloud-ios-swiftUITests";
+			productName = "arcloud-ios-swiftUITests";
+			productReference = 707A8AFD26B037B3004C9CAD /* arcloud-ios-swiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		707A8AD426B037A8004C9CAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					707A8ADB26B037A9004C9CAD = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					707A8AF126B037B2004C9CAD = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 707A8ADB26B037A9004C9CAD;
+					};
+					707A8AFC26B037B3004C9CAD = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 707A8ADB26B037A9004C9CAD;
+					};
+				};
+			};
+			buildConfigurationList = 707A8AD726B037A8004C9CAD /* Build configuration list for PBXProject "arcloud-ios-swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 707A8AD326B037A8004C9CAD;
+			productRefGroup = 707A8ADD26B037A9004C9CAD /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 707A8B2626B039F0004C9CAD /* Products */;
+					ProjectRef = 707A8B2026B039EA004C9CAD /* BanubaSdk.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				707A8ADB26B037A9004C9CAD /* arcloud-ios-swift */,
+				707A8AF126B037B2004C9CAD /* arcloud-ios-swiftTests */,
+				707A8AFC26B037B3004C9CAD /* arcloud-ios-swiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BanubaSdk.framework;
+			remoteRef = 707A8B2926B039F0004C9CAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		707A8ADA26B037A9004C9CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707A8B3C26B03BDA004C9CAD /* README.md in Resources */,
+				707A8AE726B037A9004C9CAD /* ARCloud.storyboard in Resources */,
+				707A8B3926B03BB1004C9CAD /* effects in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		707A8AF026B037B2004C9CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		707A8AFB26B037B3004C9CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		707A8AD826B037A9004C9CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707A8B1626B038C3004C9CAD /* ARCloudManager.swift in Sources */,
+				707A8B1826B038D0004C9CAD /* ARCloudViewController.swift in Sources */,
+				707A8B1A26B038DA004C9CAD /* AREffectModel.swift in Sources */,
+				707A8AE026B037A9004C9CAD /* AppDelegate.swift in Sources */,
+				707A8B1326B0386B004C9CAD /* BanubaClientToken.swift in Sources */,
+				707A8B1C26B038E5004C9CAD /* EffectCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		707A8AEE26B037B2004C9CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		707A8AF926B037B3004C9CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707A8B0226B037B3004C9CAD /* arcloud_ios_swiftUITests.swift in Sources */,
+				707A8B1126B03834004C9CAD /* quickstart_ios_swiftUITestsBase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		707A8AF426B037B2004C9CAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 707A8ADB26B037A9004C9CAD /* arcloud-ios-swift */;
+			targetProxy = 707A8AF326B037B2004C9CAD /* PBXContainerItemProxy */;
+		};
+		707A8AFF26B037B3004C9CAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 707A8ADB26B037A9004C9CAD /* arcloud-ios-swift */;
+			targetProxy = 707A8AFE26B037B3004C9CAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		707A8AE526B037A9004C9CAD /* ARCloud.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				707A8AE626B037A9004C9CAD /* Base */,
+			);
+			name = ARCloud.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		707A8B0426B037B3004C9CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		707A8B0526B037B3004C9CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					arm64,
+					x86_64,
+				);
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		707A8B0726B037B3004C9CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
+				INFOPLIST_FILE = "arcloud-ios-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Banuba.arcloud-ios-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		707A8B0826B037B3004C9CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
+				INFOPLIST_FILE = "arcloud-ios-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Banuba.arcloud-ios-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		707A8B0A26B037B3004C9CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEWUB88C7M;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = "arcloud-ios-swiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Banuba.arcloud-ios-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/arcloud-ios-swift.app/arcloud-ios-swift";
+			};
+			name = Debug;
+		};
+		707A8B0B26B037B3004C9CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEWUB88C7M;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = "arcloud-ios-swiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Banuba.arcloud-ios-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/arcloud-ios-swift.app/arcloud-ios-swift";
+			};
+			name = Release;
+		};
+		707A8B0D26B037B3004C9CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEWUB88C7M;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = "arcloud-ios-swiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Banuba.arcloud-ios-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "arcloud-ios-swift";
+			};
+			name = Debug;
+		};
+		707A8B0E26B037B3004C9CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NEWUB88C7M;
+				ENABLE_BITCODE = YES;
+				INFOPLIST_FILE = "arcloud-ios-swiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Banuba.arcloud-ios-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "arcloud-ios-swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		707A8AD726B037A8004C9CAD /* Build configuration list for PBXProject "arcloud-ios-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				707A8B0426B037B3004C9CAD /* Debug */,
+				707A8B0526B037B3004C9CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		707A8B0626B037B3004C9CAD /* Build configuration list for PBXNativeTarget "arcloud-ios-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				707A8B0726B037B3004C9CAD /* Debug */,
+				707A8B0826B037B3004C9CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		707A8B0926B037B3004C9CAD /* Build configuration list for PBXNativeTarget "arcloud-ios-swiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				707A8B0A26B037B3004C9CAD /* Debug */,
+				707A8B0B26B037B3004C9CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		707A8B0C26B037B3004C9CAD /* Build configuration list for PBXNativeTarget "arcloud-ios-swiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				707A8B0D26B037B3004C9CAD /* Debug */,
+				707A8B0E26B037B3004C9CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 707A8AD426B037A8004C9CAD /* Project object */;
+}
