@@ -24,7 +24,6 @@
 		707A8B3526B03A09004C9CAD /* BanubaUtilities.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		707A8B3626B03A0E004C9CAD /* BanubaSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */; };
 		707A8B3726B03A0E004C9CAD /* BanubaSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		707A8B3926B03BB1004C9CAD /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 707A8B3826B03BB1004C9CAD /* effects */; };
 		707A8B3C26B03BDA004C9CAD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 707A8B3B26B03BDA004C9CAD /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -88,7 +87,6 @@
 		707A8B2026B039EA004C9CAD /* BanubaSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BanubaSdk.xcodeproj; sourceTree = "<group>"; };
 		707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BanubaUtilities.xcframework; sourceTree = "<group>"; };
 		707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BanubaARCloudSDK.xcframework; sourceTree = "<group>"; };
-		707A8B3826B03BB1004C9CAD /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
 		707A8B3B26B03BDA004C9CAD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,7 +146,6 @@
 				707A8B1226B0386B004C9CAD /* BanubaClientToken.swift */,
 				707A8ADF26B037A9004C9CAD /* AppDelegate.swift */,
 				707A8B1426B038B2004C9CAD /* ARCloud */,
-				707A8B3826B03BB1004C9CAD /* effects */,
 				707A8AED26B037B2004C9CAD /* Info.plist */,
 			);
 			path = "arcloud-ios-swift";
@@ -317,7 +314,6 @@
 			files = (
 				707A8B3C26B03BDA004C9CAD /* README.md in Resources */,
 				707A8AE726B037A9004C9CAD /* ARCloud.storyboard in Resources */,
-				707A8B3926B03BB1004C9CAD /* effects in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
