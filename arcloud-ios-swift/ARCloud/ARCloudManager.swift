@@ -5,8 +5,7 @@ import BanubaEffectPlayer
 struct ARCloudManager {
     
     // Add your Client Cloud Id instead of empty quotes
-    static let arCloudUrl = BNBLicenseManager.create(banubaClientToken)?.getJson().getARCloudUrl()
-    fileprivate static let banubaARCloud = BanubaARCloud(arCloudUrl: arCloudUrl!)
+    fileprivate static let banubaARCloud = BanubaARCloud(arCloudUrl: banubaArCloudURL)
     
     static func fetchAREffects(completion: @escaping ([AREffectModel]) -> Void) {
         
@@ -49,22 +48,5 @@ struct ARCloudManager {
                 })
             }
         }
-    }
-}
-
-extension String {
-    func getARCloudUrl() -> String {
-        let data = Data(self.utf8)
-        var resultedUrl = String()
-        do {
-            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                if let url = json["ar_cloud_url"] as? String {
-                    resultedUrl = url
-                }
-            }
-        } catch let error as NSError {
-            print("Failed to load: \(error.localizedDescription)")
-        }
-        return resultedUrl
     }
 }
