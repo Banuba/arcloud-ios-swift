@@ -11,7 +11,7 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var sdkManager = BanubaSdkManager()
-    private let config = EffectPlayerConfiguration(renderMode: .video, renderContentMode: .resizeAspectFill)
+    private let config = EffectPlayerConfiguration(renderMode: .video)
     private var effectArray: [AREffectModel]? = []
     
     //MARK: - ARCloud
@@ -109,7 +109,7 @@ extension ARCloudViewController {
     }
     
     private func setUpRenderTarget() {
-        guard let effectView = self.effectView.layer as? CAEAGLLayer else { return }
+        guard let effectView = self.effectView.layer as?  CAMetalLayer else { return }
         sdkManager.setRenderTarget(layer: effectView, playerConfiguration: nil)
         sdkManager.startEffectPlayer()
     }
