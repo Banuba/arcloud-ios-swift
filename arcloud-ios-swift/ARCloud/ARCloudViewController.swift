@@ -1,7 +1,5 @@
 import UIKit
 import BanubaSdk
-import BanubaEffectPlayer
-import BanubaARCloudSDK
 
 class ARCloudViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,
                              UICollectionViewDelegateFlowLayout {
@@ -32,7 +30,7 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     private func downloadAREffect(newEffectName: String, synchronous: Bool) {
         _ = sdkManager.loadEffect(newEffectName, synchronous: synchronous)
     }
-        
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EffectCollectionViewCell", for: indexPath) as! EffectCollectionViewCell
         let effect = self.effectArray?[indexPath.item]
@@ -58,7 +56,9 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
         ARCloudManager.loadTappedEffect(effectName: effectName) { [weak self] effectUrl in
             guard let self = self else { return }
             self.downloadAREffect(newEffectName: effectName, synchronous: true)
-            self.activityIndicator.stopAnimating()
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+            }
         }
     }
     
