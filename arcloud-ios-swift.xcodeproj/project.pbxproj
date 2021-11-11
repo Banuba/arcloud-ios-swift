@@ -25,7 +25,7 @@
 		707A8B3626B03A0E004C9CAD /* BanubaSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */; };
 		707A8B3726B03A0E004C9CAD /* BanubaSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		707A8B3C26B03BDA004C9CAD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 707A8B3B26B03BDA004C9CAD /* README.md */; };
-		707A8C8C26B04697004C9CAD /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 707A8C8B26B04697004C9CAD /* effects */; };
+		707C7FBA273D41AD0079516D /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 707C7FB9273D41AD0079516D /* effects */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +89,7 @@
 		707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BanubaUtilities.xcframework; sourceTree = "<group>"; };
 		707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BanubaARCloudSDK.xcframework; sourceTree = "<group>"; };
 		707A8B3B26B03BDA004C9CAD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		707A8C8B26B04697004C9CAD /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; name = effects; path = ../effects; sourceTree = "<group>"; };
+		707C7FB9273D41AD0079516D /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +148,8 @@
 				707A8B1226B0386B004C9CAD /* BanubaClientToken.swift */,
 				707A8ADF26B037A9004C9CAD /* AppDelegate.swift */,
 				707A8B1426B038B2004C9CAD /* ARCloud */,
+				707C7FB9273D41AD0079516D /* effects */,
 				707A8AED26B037B2004C9CAD /* Info.plist */,
-				707A8C8B26B04697004C9CAD /* effects */,
 			);
 			path = "arcloud-ios-swift";
 			sourceTree = "<group>";
@@ -315,7 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707A8C8C26B04697004C9CAD /* effects in Resources */,
+				707C7FBA273D41AD0079516D /* effects in Resources */,
 				707A8B3C26B03BDA004C9CAD /* README.md in Resources */,
 				707A8AE726B037A9004C9CAD /* ARCloud.storyboard in Resources */,
 			);
@@ -527,6 +527,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
 				INFOPLIST_FILE = "arcloud-ios-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -548,6 +549,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
 				INFOPLIST_FILE = "arcloud-ios-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

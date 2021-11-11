@@ -6,15 +6,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    let documents = FileManager.default.urls(
-        for: .documentDirectory,
-           in: .userDomainMask
-    ).last ?? FileManager.default.temporaryDirectory
-    
-    func application(_application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        let deviceDocumentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last?.path
         BanubaSdkManager.initialize(
-            resourcePath: [documents.appendingPathComponent("Effects").path],
+            resourcePath: [deviceDocumentsPath! + "/Effects/"],
             clientTokenString: banubaClientToken
         )
         

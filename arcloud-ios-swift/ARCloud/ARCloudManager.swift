@@ -11,6 +11,7 @@ struct ARCloudManager {
     static func fetchAREffects(completion: @escaping ([AREffectModel]) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
             banubaARCloud.getAREffects {(effectsArray, _) in
+                loadedArray = effectsArray!
                 effectsArray?.forEach({ effect in
                     let effectModel = AREffectModel(
                         title: effect.title,
@@ -27,28 +28,29 @@ struct ARCloudManager {
     
     static func loadTappedEffect(effectName: String, completion: @escaping (URL) -> Void) {
         DispatchQueue.global(qos: .userInteractive).async {
-            banubaARCloud.getAREffects {(effectsArray, _) in
-                effectsArray?.forEach({ effect in
-                    guard effectName != effect.title else {
-                        var currentProgress: Double?
-                        if !effect.isDownloaded {
-                            banubaARCloud.downloadArEffect(effect) {(progress) in
-                                currentProgress = progress
-                            } completion: {(url, error) in
-                                DispatchQueue.main.async {
-                                    guard currentProgress != 1 else {
-                                        completion(url!)
-                                        return
-                                    }
+            loadedArray.forEach({ effect in
+                guard effectName != effect.title else {
+                    var currentProgress: Double?
+                    if !effect.isDownloaded {
+                        banubaARCloud.downloadArEffect(effect) {(progress) in
+                            currentProgress = progress
+                        } completion: {(url, error) in
+                            DispatchQueue.main.async {
+                                guard currentProgress != 1 else {
+                                    completion(url!)
+                                    return
                                 }
                             }
-                        } else {
-                            completion(effect.localURL!)
+                            banubaARCloud.getAREffects { effectsArray, _ in
+                                loadedArray = effectsArray!
+                            }
                         }
-                        return
+                    } else {
+                        completion(effect.localURL!)
                     }
-                })
-            }
+                    return
+                }
+            })
         }
     }
 }
