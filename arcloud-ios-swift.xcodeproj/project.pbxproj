@@ -14,7 +14,6 @@
 		707A8B1326B0386B004C9CAD /* BanubaClientToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1226B0386B004C9CAD /* BanubaClientToken.swift */; };
 		707A8B1626B038C3004C9CAD /* ARCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1526B038C3004C9CAD /* ARCloudManager.swift */; };
 		707A8B1826B038D0004C9CAD /* ARCloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1726B038D0004C9CAD /* ARCloudViewController.swift */; };
-		707A8B1A26B038DA004C9CAD /* AREffectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1926B038DA004C9CAD /* AREffectModel.swift */; };
 		707A8B1C26B038E5004C9CAD /* EffectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1B26B038E5004C9CAD /* EffectCollectionViewCell.swift */; };
 		707A8B2F26B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */; };
 		707A8B3026B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -82,7 +81,6 @@
 		707A8B1226B0386B004C9CAD /* BanubaClientToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanubaClientToken.swift; sourceTree = "<group>"; };
 		707A8B1526B038C3004C9CAD /* ARCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCloudManager.swift; sourceTree = "<group>"; };
 		707A8B1726B038D0004C9CAD /* ARCloudViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCloudViewController.swift; sourceTree = "<group>"; };
-		707A8B1926B038DA004C9CAD /* AREffectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AREffectModel.swift; sourceTree = "<group>"; };
 		707A8B1B26B038E5004C9CAD /* EffectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectCollectionViewCell.swift; sourceTree = "<group>"; };
 		707A8B1E26B039E4004C9CAD /* BanubaEffectPlayer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BanubaEffectPlayer.xcframework; sourceTree = "<group>"; };
 		707A8B2026B039EA004C9CAD /* BanubaSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BanubaSdk.xcodeproj; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 				707A8B1526B038C3004C9CAD /* ARCloudManager.swift */,
 				707A8AE526B037A9004C9CAD /* ARCloud.storyboard */,
 				707A8B1726B038D0004C9CAD /* ARCloudViewController.swift */,
-				707A8B1926B038DA004C9CAD /* AREffectModel.swift */,
 				707A8B1B26B038E5004C9CAD /* EffectCollectionViewCell.swift */,
 			);
 			path = ARCloud;
@@ -344,7 +341,6 @@
 			files = (
 				707A8B1626B038C3004C9CAD /* ARCloudManager.swift in Sources */,
 				707A8B1826B038D0004C9CAD /* ARCloudViewController.swift in Sources */,
-				707A8B1A26B038DA004C9CAD /* AREffectModel.swift in Sources */,
 				707A8AE026B037A9004C9CAD /* AppDelegate.swift in Sources */,
 				707A8B1326B0386B004C9CAD /* BanubaClientToken.swift in Sources */,
 				707A8B1C26B038E5004C9CAD /* EffectCollectionViewCell.swift in Sources */,
