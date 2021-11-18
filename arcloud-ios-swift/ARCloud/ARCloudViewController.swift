@@ -1,6 +1,5 @@
 import UIKit
 import BanubaSdk
-import BanubaEffectPlayer
 import BanubaARCloudSDK
 
 class ARCloudViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,
@@ -11,17 +10,17 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var sdkManager = BanubaSdkManager()
-    private let config = EffectPlayerConfiguration(renderMode: .video)
-    private var effectArray: [AREffectModel]? = []
+    private let config = EffectPlayerConfiguration(renderMode: .video, renderContentMode: .resizeAspectFill)
+    private var effectsArray: [AREffect] = []
     
     //MARK: - ARCloud
     
     // Start loading all effect previews from AR Cloud
     private func loadAREffectPreviews() {
         DispatchQueue.main.async {
-            ARCloudManager.fetchAREffects(completion: { [weak self] array  in
+            ARCloudManager.fetchAREffects(completion: { [weak self] effectsList  in
                 guard let self = self else { return }
-                self.effectArray = array
+                self.effectsArray = effectsList
                 self.collectionView.reloadData()
                 self.activityIndicator.stopAnimating()
             })
@@ -32,18 +31,15 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     private func downloadAREffect(newEffectName: String, synchronous: Bool) {
         _ = sdkManager.loadEffect(newEffectName, synchronous: synchronous)
     }
-        
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EffectCollectionViewCell", for: indexPath) as! EffectCollectionViewCell
-        let effect = self.effectArray?[indexPath.item]
+        let effect = effectsArray[indexPath.item]
         
         DispatchQueue.global(qos: .userInitiated).async {
-            guard let url = URL(string: effect?.previewUrl ?? ""),
-                  let imageData = try? Data(contentsOf: url)
-            else { return }
-            
+            guard let imageData = try? Data(contentsOf: effect.previewImage) else { return }
             DispatchQueue.main.async {
-                cell.titleLabel.text = effect?.title
+                cell.titleLabel.text = effect.title
                 cell.previewImage.image = UIImage(data: imageData)
             }
         }
@@ -51,21 +47,22 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let effect = self.effectArray?[indexPath.item]
-        guard let effectName = effect?.title else { return }
+        let effectName = effectsArray[indexPath.item].title
         activityIndicator.startAnimating()
         
         ARCloudManager.loadTappedEffect(effectName: effectName) { [weak self] effectUrl in
             guard let self = self else { return }
             self.downloadAREffect(newEffectName: effectName, synchronous: true)
-            self.activityIndicator.stopAnimating()
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+            }
         }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int { 1 }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.effectArray?.count ?? 0
+        effectsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
