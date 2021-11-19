@@ -10,7 +10,7 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var sdkManager = BanubaSdkManager()
-    private let config = EffectPlayerConfiguration(renderMode: .video, renderContentMode: .resizeAspectFill)
+    private let config = EffectPlayerConfiguration(renderMode: .video)
     private var effectsArray: [AREffect] = []
     
     //MARK: - ARCloud
