@@ -18,7 +18,7 @@ Please use [v0.x](../../tree/v0.x) branch for SDK version 0.x (e.g. v0.38).
  1. Get the latest BanubaARCloud SDK archive for iOS and the AR cloud URL. Please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
  2. Copy `BanubaARCloudSDK.xcframework` into `arcloud-ios-swift/Frameworks/`
  3. Copy `BanubaUtilities.xcframework` into `arcloud-ios-swift/Frameworks/`
- 4. Copy and Paste your AR cloud URL into [banubaArCloudURL](/arcloud-ios-swift/BanubaClientToken.swift#L4) property
+ 4. Copy and Paste your AR cloud URL into [banubaArCloudURL](/arcloud-ios-swift/BanubaClientToken.swift#L4) property or use predefined Demo bucket
 
 # Contributing
 
