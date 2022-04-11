@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14E0014F280472CB0069C36F /* BanubaARCloudSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */; };
+		14E00150280472CB0069C36F /* BanubaARCloudSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14E00152280472CF0069C36F /* BanubaUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */; };
+		14E00153280472CF0069C36F /* BanubaUtilities.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		36452386478154E1146BA7DD /* Pods_arcloud_ios_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A813E6DB3A0789059326AE37 /* Pods_arcloud_ios_swift.framework */; };
+		66A8350938A54D63A54EDA61 /* Pods_arcloud_ios_swiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CFB713A474661D6E525C7B /* Pods_arcloud_ios_swiftUITests.framework */; };
 		707A8AE026B037A9004C9CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8ADF26B037A9004C9CAD /* AppDelegate.swift */; };
 		707A8AE726B037A9004C9CAD /* ARCloud.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 707A8AE526B037A9004C9CAD /* ARCloud.storyboard */; };
 		707A8B0226B037B3004C9CAD /* arcloud_ios_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B0126B037B3004C9CAD /* arcloud_ios_swiftUITests.swift */; };
@@ -15,14 +21,6 @@
 		707A8B1626B038C3004C9CAD /* ARCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1526B038C3004C9CAD /* ARCloudManager.swift */; };
 		707A8B1826B038D0004C9CAD /* ARCloudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1726B038D0004C9CAD /* ARCloudViewController.swift */; };
 		707A8B1C26B038E5004C9CAD /* EffectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707A8B1B26B038E5004C9CAD /* EffectCollectionViewCell.swift */; };
-		707A8B2F26B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */; };
-		707A8B3026B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		707A8B3226B03A08004C9CAD /* BanubaEffectPlayer.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B1E26B039E4004C9CAD /* BanubaEffectPlayer.xcframework */; };
-		707A8B3326B03A08004C9CAD /* BanubaEffectPlayer.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B1E26B039E4004C9CAD /* BanubaEffectPlayer.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		707A8B3426B03A09004C9CAD /* BanubaUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */; };
-		707A8B3526B03A09004C9CAD /* BanubaUtilities.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		707A8B3626B03A0E004C9CAD /* BanubaSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */; };
-		707A8B3726B03A0E004C9CAD /* BanubaSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 707A8B2A26B039F0004C9CAD /* BanubaSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		707A8B3C26B03BDA004C9CAD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 707A8B3B26B03BDA004C9CAD /* README.md */; };
 		707C7FBA273D41AD0079516D /* effects in Resources */ = {isa = PBXBuildFile; fileRef = 707C7FB9273D41AD0079516D /* effects */; };
 /* End PBXBuildFile section */
@@ -52,16 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		707A8B3126B03A07004C9CAD /* Embed Frameworks */ = {
+		14E00151280472CB0069C36F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				707A8B3326B03A08004C9CAD /* BanubaEffectPlayer.xcframework in Embed Frameworks */,
-				707A8B3026B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Embed Frameworks */,
-				707A8B3726B03A0E004C9CAD /* BanubaSdk.framework in Embed Frameworks */,
-				707A8B3526B03A09004C9CAD /* BanubaUtilities.xcframework in Embed Frameworks */,
+				14E00150280472CB0069C36F /* BanubaARCloudSDK.xcframework in Embed Frameworks */,
+				14E00153280472CF0069C36F /* BanubaUtilities.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		386691A4AF1E643B9A7223E7 /* Pods-arcloud-ios-swiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arcloud-ios-swiftUITests.release.xcconfig"; path = "Target Support Files/Pods-arcloud-ios-swiftUITests/Pods-arcloud-ios-swiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		707A8ADC26B037A9004C9CAD /* arcloud-ios-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "arcloud-ios-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		707A8ADF26B037A9004C9CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		707A8AE626B037A9004C9CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ARCloud.storyboard; sourceTree = "<group>"; };
@@ -88,6 +85,11 @@
 		707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = BanubaARCloudSDK.xcframework; sourceTree = "<group>"; };
 		707A8B3B26B03BDA004C9CAD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		707C7FB9273D41AD0079516D /* effects */ = {isa = PBXFileReference; lastKnownFileType = folder; path = effects; sourceTree = "<group>"; };
+		78CFB713A474661D6E525C7B /* Pods_arcloud_ios_swiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_arcloud_ios_swiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		914A0ED40D8A149F3E85CC0F /* Pods-arcloud-ios-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arcloud-ios-swift.debug.xcconfig"; path = "Target Support Files/Pods-arcloud-ios-swift/Pods-arcloud-ios-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		9CEB83AD3C40F4CE65413F62 /* Pods-arcloud-ios-swiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arcloud-ios-swiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-arcloud-ios-swiftUITests/Pods-arcloud-ios-swiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A813E6DB3A0789059326AE37 /* Pods_arcloud_ios_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_arcloud_ios_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD744B84C6C6DFB4CAE6B9A3 /* Pods-arcloud-ios-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-arcloud-ios-swift.release.xcconfig"; path = "Target Support Files/Pods-arcloud-ios-swift/Pods-arcloud-ios-swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +97,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707A8B3226B03A08004C9CAD /* BanubaEffectPlayer.xcframework in Frameworks */,
-				707A8B2F26B03A07004C9CAD /* BanubaARCloudSDK.xcframework in Frameworks */,
-				707A8B3626B03A0E004C9CAD /* BanubaSdk.framework in Frameworks */,
-				707A8B3426B03A09004C9CAD /* BanubaUtilities.xcframework in Frameworks */,
+				14E0014F280472CB0069C36F /* BanubaARCloudSDK.xcframework in Frameworks */,
+				36452386478154E1146BA7DD /* Pods_arcloud_ios_swift.framework in Frameworks */,
+				14E00152280472CF0069C36F /* BanubaUtilities.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A8350938A54D63A54EDA61 /* Pods_arcloud_ios_swiftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +129,7 @@
 				707A8B0026B037B3004C9CAD /* arcloud-ios-swiftUITests */,
 				707A8ADD26B037A9004C9CAD /* Products */,
 				707A8B1D26B039B4004C9CAD /* Frameworks */,
+				B015DBF76E3555BFE8156273 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +183,8 @@
 				707A8B2D26B039FD004C9CAD /* BanubaARCloudSDK.xcframework */,
 				707A8B1E26B039E4004C9CAD /* BanubaEffectPlayer.xcframework */,
 				707A8B2B26B039F6004C9CAD /* BanubaUtilities.xcframework */,
+				A813E6DB3A0789059326AE37 /* Pods_arcloud_ios_swift.framework */,
+				78CFB713A474661D6E525C7B /* Pods_arcloud_ios_swiftUITests.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -192,6 +197,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B015DBF76E3555BFE8156273 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				914A0ED40D8A149F3E85CC0F /* Pods-arcloud-ios-swift.debug.xcconfig */,
+				BD744B84C6C6DFB4CAE6B9A3 /* Pods-arcloud-ios-swift.release.xcconfig */,
+				9CEB83AD3C40F4CE65413F62 /* Pods-arcloud-ios-swiftUITests.debug.xcconfig */,
+				386691A4AF1E643B9A7223E7 /* Pods-arcloud-ios-swiftUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,10 +215,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 707A8B0626B037B3004C9CAD /* Build configuration list for PBXNativeTarget "arcloud-ios-swift" */;
 			buildPhases = (
+				003B2455FCAA9A9BB5C00D73 /* [CP] Check Pods Manifest.lock */,
 				707A8AD826B037A9004C9CAD /* Sources */,
 				707A8AD926B037A9004C9CAD /* Frameworks */,
 				707A8ADA26B037A9004C9CAD /* Resources */,
-				707A8B3126B03A07004C9CAD /* Embed Frameworks */,
+				628BA2490C8824D40EC7459D /* [CP] Embed Pods Frameworks */,
+				6596B8512A4DCAB3C6BBC848 /* [CP] Copy Pods Resources */,
+				14E00151280472CB0069C36F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +254,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 707A8B0C26B037B3004C9CAD /* Build configuration list for PBXNativeTarget "arcloud-ios-swiftUITests" */;
 			buildPhases = (
+				0EA2E8A01862CB4311D22833 /* [CP] Check Pods Manifest.lock */,
 				707A8AF926B037B3004C9CAD /* Sources */,
 				707A8AFA26B037B3004C9CAD /* Frameworks */,
 				707A8AFB26B037B3004C9CAD /* Resources */,
@@ -333,6 +353,87 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		003B2455FCAA9A9BB5C00D73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-arcloud-ios-swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EA2E8A01862CB4311D22833 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-arcloud-ios-swiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		628BA2490C8824D40EC7459D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-arcloud-ios-swift/Pods-arcloud-ios-swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-arcloud-ios-swift/Pods-arcloud-ios-swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-arcloud-ios-swift/Pods-arcloud-ios-swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6596B8512A4DCAB3C6BBC848 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-arcloud-ios-swift/Pods-arcloud-ios-swift-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-arcloud-ios-swift/Pods-arcloud-ios-swift-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-arcloud-ios-swift/Pods-arcloud-ios-swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		707A8AD826B037A9004C9CAD /* Sources */ = {
@@ -518,13 +619,13 @@
 		};
 		707A8B0726B037B3004C9CAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 914A0ED40D8A149F3E85CC0F /* Pods-arcloud-ios-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
 				INFOPLIST_FILE = "arcloud-ios-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -540,13 +641,13 @@
 		};
 		707A8B0826B037B3004C9CAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD744B84C6C6DFB4CAE6B9A3 /* Pods-arcloud-ios-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/Frameworks\"";
 				INFOPLIST_FILE = "arcloud-ios-swift/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -608,6 +709,7 @@
 		};
 		707A8B0D26B037B3004C9CAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CEB83AD3C40F4CE65413F62 /* Pods-arcloud-ios-swiftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -629,6 +731,7 @@
 		};
 		707A8B0E26B037B3004C9CAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 386691A4AF1E643B9A7223E7 /* Pods-arcloud-ios-swiftUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

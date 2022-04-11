@@ -1,5 +1,5 @@
 import UIKit
-import BanubaSdk
+import BNBSdkApi
 import BanubaARCloudSDK
 
 class ARCloudViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,
