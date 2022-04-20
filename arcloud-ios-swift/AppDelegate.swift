@@ -1,5 +1,5 @@
 import UIKit
-import BanubaSdk
+import BNBSdkApi
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,7 +10,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         let deviceDocumentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last?.path
         BanubaSdkManager.initialize(
-            resourcePath: [deviceDocumentsPath! + "/Effects/"],
+            resourcePath: [Bundle.main.bundlePath + "/bnb-resources",
+                           Bundle.main.bundlePath + "/effects",
+                           deviceDocumentsPath! + "/Effects/"],
             clientTokenString: banubaClientToken
         )
         
