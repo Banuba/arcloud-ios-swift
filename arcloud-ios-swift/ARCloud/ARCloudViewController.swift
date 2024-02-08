@@ -9,8 +9,8 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private var sdkManager = BanubaSdkManager()
-    private let config = EffectPlayerConfiguration()
+    private lazy var player = Player()
+    private lazy var cameraDevice = CameraDevice(cameraMode: .FrontCameraSession, captureSessionPreset: .hd1280x720)
     private var effectsArray: [AREffect] = []
     
     //MARK: - ARCloud
@@ -25,11 +25,6 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
                 self.activityIndicator.stopAnimating()
             })
         }
-    }
-    
-    // Start loading tapped effect by the effect name
-    private func downloadAREffect(newEffectName: String, synchronous: Bool) {
-        _ = sdkManager.loadEffect(newEffectName, synchronous: synchronous)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -52,7 +47,8 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         ARCloudManager.loadTappedEffect(effectName: effectName) { [weak self] effectUrl in
             guard let self = self else { return }
-            self.downloadAREffect(newEffectName: effectName, synchronous: true)
+            // Apply downloaded effect
+            _ = self.player.load(effect: effectName)
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
             }
@@ -69,10 +65,6 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
         CGSize(width: 180, height: 180)
     }
     
-    deinit {
-        sdkManager.destroyEffectPlayer()
-    }
-    
     @IBAction func closeARCloud(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
@@ -80,55 +72,17 @@ class ARCloudViewController: UIViewController, UICollectionViewDelegate, UIColle
 
 //MARK: Camera
 extension ARCloudViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAREffectPreviews()
         effectView.layoutIfNeeded()
-        sdkManager.setup(configuration: config)
-        setUpRenderSize()
+        player.use(input: Camera(cameraDevice: cameraDevice))
+        player.use(outputs: [effectView])
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         activityIndicator.startAnimating()
-        sdkManager.input.startCamera()
-        sdkManager.startEffectPlayer()
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        sdkManager.stopEffectPlayer()
-        sdkManager.removeRenderTarget()
-        coordinator.animateAlongsideTransition(in: effectView, animation: { (UIViewControllerTransitionCoordinatorContext) in
-            self.sdkManager.autoRotationEnabled = true
-            self.setUpRenderSize()
-        }, completion: nil)
-    }
-    
-    private func setUpRenderTarget() {
-        guard let effectView = self.effectView.layer as?  CAMetalLayer else { return }
-        sdkManager.setRenderTarget(layer: effectView, playerConfiguration: nil)
-        sdkManager.startEffectPlayer()
-    }
-    
-    private func setUpRenderSize() {
-        switch UIApplication.shared.statusBarOrientation {
-        case .portrait:
-            config.orientation = .deg90
-            config.renderSize = CGSize(width: 720, height: 1280)
-            sdkManager.autoRotationEnabled = false
-        case .portraitUpsideDown:
-            config.orientation = .deg270
-            config.renderSize = CGSize(width: 720, height: 1280)
-        case .landscapeLeft:
-            config.orientation = .deg180
-            config.renderSize = CGSize(width: 1280, height: 720)
-        case .landscapeRight:
-            config.orientation = .deg0
-            config.renderSize = CGSize(width: 1280, height: 720)
-        default:
-            break
-        }
-        setUpRenderTarget()
+        cameraDevice.start()
     }
 }

@@ -3,7 +3,7 @@ import BanubaARCloudSDK
 
 struct ARCloudManager {
     
-    // Add your Client Cloud Id instead of empty quotes
+    // Initialize AR Cloud SDK with URL
     fileprivate static let banubaARCloud = BanubaARCloud(arCloudUrl: banubaArCloudURL)
     fileprivate static var effectsList: [AREffect] = []
     
