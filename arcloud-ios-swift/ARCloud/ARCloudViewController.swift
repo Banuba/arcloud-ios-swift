@@ -78,6 +78,7 @@ extension ARCloudViewController {
         effectView.layoutIfNeeded()
         player.use(input: Camera(cameraDevice: cameraDevice))
         player.use(outputs: [effectView])
+        player.play()
     }
     
     override func viewWillAppear(_ animated: Bool) {

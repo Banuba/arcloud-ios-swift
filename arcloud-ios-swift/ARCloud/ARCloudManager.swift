@@ -4,7 +4,16 @@ import BanubaARCloudSDK
 struct ARCloudManager {
     
     // Initialize AR Cloud SDK with URL
-    fileprivate static let banubaARCloud = BanubaARCloud(arCloudUrl: banubaArCloudURL)
+    static var arcloudEffectsFolderURL: URL {
+        let manager = FileManager.default
+        let documents = manager.urls(
+          for: .documentDirectory,
+          in: .userDomainMask
+        ).last ?? manager.temporaryDirectory
+        let effectsFolder = documents.appendingPathComponent("Effects")
+        return effectsFolder
+    }
+    fileprivate static let banubaARCloud = BanubaARCloud(arCloudUrl: banubaArCloudURL, effectsFolderURL: arcloudEffectsFolderURL)
     fileprivate static var effectsList: [AREffect] = []
     
     static func fetchAREffects(completion: @escaping ([AREffect]) -> Void) {
