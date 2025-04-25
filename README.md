@@ -11,8 +11,8 @@ Quick start examples for integrating [Banuba SDK on iOS](https://docs.banuba.com
 # AR Cloud
 
  1. Get the latest BanubaARCloud SDK archive for iOS and the AR cloud URL. Please fill in our form on [form on banuba.com](https://www.banuba.com/face-filters-sdk) website, or contact us via [info@banuba.com](mailto:info@banuba.com).
- 2. Copy `BanubaARCloudSDK.xcframework` into `arcloud-ios-swift/Frameworks/`
- 3. Copy `BanubaUtilities.xcframework` into `arcloud-ios-swift/Frameworks/`
+ 2. Copy `BanubaARCloudSDK.xcframework` [from here](https://github.com/Banuba/BanubaARCloudSDK-IOS) into `arcloud-ios-swift/Frameworks/`
+ 3. Copy `BanubaUtilities.xcframework` [from here](https://github.com/Banuba/BanubaUtilities-iOS) into `arcloud-ios-swift/Frameworks/`
  4. Copy and Paste your AR cloud URL into [banubaArCloudURL](/arcloud-ios-swift/BanubaClientToken.swift#L4) property or use predefined Demo bucket
 
 # Contributing
